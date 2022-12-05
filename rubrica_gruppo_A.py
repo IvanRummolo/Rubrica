@@ -16,11 +16,13 @@
 #Implementare funzioni:
 
 def visualizza_lista(lista):
-   # ciaoo
-    return
+    lista =  input('inserisci lista di nomi ').split()
+    print(lista)
+    return lista
+
 
 def aggiungi_nome(lista, nome):
-    return
+    return 
 
 def elimina_nome(nomi, nome):
     nuova_lista = []
@@ -38,22 +40,22 @@ print("comandi disponibili: lista, aggiungi, elimina, modifica, esci")
 
 comando = input("inserire comando >> ")
 esci = False
-nomi = []
+lista = []
 while not esci:
 
     match comando:
         case 'lista':
-            visualizza_lista(nomi)
+            visualizza_lista(lista) 
         case 'aggiungi':
             nome = input("Inserisci nome da aggiungere >> ")
-            aggiungi_nome(nomi, nome)
+            aggiungi_nome(lista, nome)
         case 'elimina':
             nome = input("Inserisci nome da eliminare >> ")
-            elimina_nome(nomi, nome)
+            elimina_nome(lista, nome)
         case 'modifica':
             nome = input("Inserisci nome da modificare >> ")
             nuovo_nome = input("Inserisci il nuovo nome >> ")
-            modifica_nome(nomi, nome, nuovo_nome)
+            modifica_nome(lista, nome, nuovo_nome)
         case 'esci':
             print("sto chiudendo il programma")
             esci = True
@@ -62,3 +64,5 @@ while not esci:
     
     if not esci:
         comando = input("inserire comando >> ")
+
+    
