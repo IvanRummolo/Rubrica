@@ -22,7 +22,6 @@ def visualizza_lista(lista):
 
 
 def aggiungi_nome(lista, nome):
-    lista = []
     lista.append(nome)
     return lista
 
