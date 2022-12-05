@@ -12,9 +12,11 @@
 # Luca Samuele
 # Danila
 
+
 #Implementare funzioni:
 
 def visualizza_lista(lista):
+   # ciaoo
     return
 
 def aggiungi_nome(lista, nome):
