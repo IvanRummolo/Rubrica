@@ -15,6 +15,7 @@
 
 def visualizza_lista(lista):
     return
+    #com
 
 def aggiungi_nome(lista, nome):
     return
