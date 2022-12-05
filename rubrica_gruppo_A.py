@@ -6,6 +6,12 @@
 #   Eliminare un nome
 #   Visualizzare tutta la rubrica
 
+#Gruppo A
+# Francesco C
+# Ivan
+# Luca Samuele
+# Danila
+
 #Implementare funzioni:
 
 def visualizza_lista(lista):
