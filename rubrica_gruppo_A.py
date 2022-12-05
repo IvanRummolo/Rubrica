@@ -22,8 +22,12 @@ def visualizza_lista(lista):
 def aggiungi_nome(lista, nome):
     return
 
-def elimina_nome(lista, nome):
-    return
+def elimina_nome(nomi, nome):
+    nuova_lista = []
+    for a in nomi:
+        if a != nome:
+            nuova_lista.append(nome)
+    return nuova_lista
 
 def modifica_nome(lista, vecchio_nome, nuovo_nome):
     return
@@ -35,7 +39,6 @@ print("comandi disponibili: lista, aggiungi, elimina, modifica, esci")
 comando = input("inserire comando >> ")
 esci = False
 nomi = []
-
 while not esci:
 
     match comando:
