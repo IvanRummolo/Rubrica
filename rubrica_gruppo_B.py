@@ -15,9 +15,11 @@
 
 def visualizza_lista(lista):
     return
+    #com
 
 def aggiungi_nome(lista, nome):
-    return
+    lista.append(nome)
+    return lista
 
 def elimina_nome(lista, nome):
     return
