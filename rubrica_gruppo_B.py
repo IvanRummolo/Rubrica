@@ -27,7 +27,7 @@ def modifica_nome(lista, vecchio_nome, nuovo_nome):
     for indice in range(len(lista)):
         if lista[indice] == vecchio_nome:
             lista[indice]=nuovo_nome
-    return
+    return lista
 
 #Avviamo il programma
 print("Benvenuto nel programma rubrica:")
