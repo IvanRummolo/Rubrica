@@ -24,6 +24,7 @@ def elimina_nome(lista, nome):
     return
 
 def modifica_nome(lista, vecchio_nome, nuovo_nome):
+    vecchio_nome = 
     return
 
 #Avviamo il programma
