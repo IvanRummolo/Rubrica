@@ -22,7 +22,7 @@ def aggiungi_nome(lista, nome):
 
 def elimina_nome(lista, nome):
    nuova_lista = []
-   for a in nomi:
+   for a in lista:
     if a != nome:
         nuova_lista.appened(nome)
     return nuova_lista
