@@ -24,10 +24,10 @@ def aggiungi_nome(lista, nome):
     return lista
 
 def elimina_nome(lista, nome):
-   nuova_lista = []
-   for a in lista:
-    if a != nome:
-        nuova_lista.appened(a)
+    nuova_lista = []
+    for a in lista:
+        if a != nome:
+            nuova_lista.append(a)
     return nuova_lista
 
 def modifica_nome(lista, vecchio_nome, nuovo_nome):
