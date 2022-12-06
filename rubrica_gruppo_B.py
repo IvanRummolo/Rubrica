@@ -25,13 +25,13 @@ def elimina_nome(lista, nome):
    nuova_lista = []
    for a in lista:
     if a != nome:
-        nuova_lista.appened(nome)
+        nuova_lista.appened(a)
     return nuova_lista
 
 def modifica_nome(lista, vecchio_nome, nuovo_nome):
     for indice in range(len(lista)):
         if lista[indice] == vecchio_nome:
-            lista[indice]=nuovo_nome
+            lista[indice] = nuovo_nome
     return lista
 
 #Avviamo il programma
@@ -49,14 +49,14 @@ while not esci:
             visualizza_lista(nomi)
         case 'aggiungi':
             nome = input("Inserisci nome da aggiungere >> ")
-            aggiungi_nome(nomi, nome)
+            nomi = aggiungi_nome(nomi, nome)
         case 'elimina':
             nome = input("Inserisci nome da eliminare >> ")
-            elimina_nome(nomi, nome)
+            nomi = elimina_nome(nomi, nome)
         case 'modifica':
             nome = input("Inserisci nome da modificare >> ")
             nuovo_nome = input("Inserisci il nuovo nome >> ")
-            modifica_nome(nomi, nome, nuovo_nome)
+            nomi = modifica_nome(nomi, nome, nuovo_nome)
         case 'esci':
             print("sto chiudendo il programma")
             esci = True
