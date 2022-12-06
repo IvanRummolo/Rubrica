@@ -15,14 +15,18 @@
 
 def visualizza_lista(lista):
     return
-    #com
+    
 
 def aggiungi_nome(lista, nome):
     lista.append(nome)
     return lista
 
 def elimina_nome(lista, nome):
-    return
+   nuova_lista = []
+   for a in lista:
+    if a != nome:
+        nuova_lista.appened(nome)
+    return nuova_lista
 
 def modifica_nome(lista, vecchio_nome, nuovo_nome):
     for indice in range(len(lista)):
