@@ -16,8 +16,12 @@
 #Implementare funzioni:
 
 def visualizza_lista(lista):
+    pos = 1
+    print("Lista nomi: -----------------")
     for nome in lista:
-        print(nome)
+        print("nome",pos,">",nome)
+        pos += 1
+    print("-----------------------------")
 
 def aggiungi_nome(lista, nome):
     lista.append(nome)
