@@ -16,10 +16,8 @@
 #Implementare funzioni:
 
 def visualizza_lista(lista):
-    lista =  input('inserisci lista di nomi ').split()
-    print(lista)
-    return lista
-
+    for nome in lista:
+        print(nome)
 
 def aggiungi_nome(lista, nome):
     lista.append(nome)
@@ -35,7 +33,7 @@ def elimina_nome(nomi, nome):
 def modifica_nome(lista, vecchio_nome, nuovo_nome):
     for i in range(len(lista)):
         if lista[i] == vecchio_nome:
-            lista[i] == nuovo_nome
+            lista[i] = nuovo_nome
     return lista 
 
 
