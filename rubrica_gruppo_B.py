@@ -11,16 +11,13 @@
 # Irene
 # Marco
 
-
-#prova 
-
-
 #Implementare funzioni:
 
 def visualizza_lista(lista):
     return
 
 def aggiungi_nome(lista, nome):
+    lista.append(nome)
     return
 
 def elimina_nome(lista, nome):
