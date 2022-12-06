@@ -14,8 +14,10 @@
 #Implementare funzioni:
 
 def visualizza_lista(lista):
-    return
-    
+    for a in lista:
+        print(a)
+    return lista
+
 
 def aggiungi_nome(lista, nome):
     lista.append(nome)
