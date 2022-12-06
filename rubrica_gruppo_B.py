@@ -24,6 +24,9 @@ def elimina_nome(lista, nome):
     return
 
 def modifica_nome(lista, vecchio_nome, nuovo_nome):
+    for indice in range(len(lista)):
+        if lista[indice] == vecchio_nome:
+            lista[indice]=nuovo_nome
     return
 
 #Avviamo il programma
