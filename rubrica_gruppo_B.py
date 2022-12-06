@@ -18,7 +18,7 @@ def visualizza_lista(lista):
 
 def aggiungi_nome(lista, nome):
     lista.append(nome)
-    return
+    return lista
 
 def elimina_nome(lista, nome):
     return
