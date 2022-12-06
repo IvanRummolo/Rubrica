@@ -15,7 +15,7 @@
 
 def visualizza_lista(lista):
     for a in lista:
-        print(lista)
+        print(a)
     return lista
 
 
