@@ -33,7 +33,11 @@ def elimina_nome(nomi, nome):
     return nuova_lista
 
 def modifica_nome(lista, vecchio_nome, nuovo_nome):
-    return
+    for i in range(len(lista)):
+        if lista[i] == vecchio_nome:
+            lista[i] == nuovo_nome
+    return lista 
+
 
 #Avviamo il programma
 print("Benvenuto nel programma rubrica:")
