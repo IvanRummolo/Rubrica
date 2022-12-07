@@ -1,4 +1,4 @@
-import {'funzioni.py'}
+from funzioni import *
 
 # Esecuzione --------------------------
 

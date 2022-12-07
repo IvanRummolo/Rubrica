@@ -12,43 +12,8 @@
 # Luca Samuele
 # Danila
 
-
-#Implementare funzioni:
-
-def visualizza_lista(nomi, numeri):
-    print("Lista nomi: -----------------")
-    for i in range(len(nomi)):
-        print("nome:", nomi[i] ,"numero: ", numeri[i])
-    print("-----------------------------")
-
-def aggiungi(lista, elemento):
-    lista.append(elemento)
-    return lista
-
-def elimina(lista, elemento):
-    nuova_lista = []
-    for el in lista:
-        if el != elemento:
-            nuova_lista.append(el)
-    return nuova_lista
-
-def trova_numero(nome, lista_nomi, lista_numeri):
-    indice = -1
-    for i in range(len(lista_nomi)):
-        if nome == lista_nomi[i]:
-            indice = i
-            break
-    if indice != -1:
-        return lista_numeri[indice]
-    else:
-        return "numero non trovato"
-
-def modifica(lista, vecchio_nome, nuovo_nome):
-    for i in range(len(lista)):
-        if lista[i] == vecchio_nome:
-            lista[i] = nuovo_nome
-    return lista 
-
+#importazione delle funzioni:
+from funzioni import *
 
 #Avviamo il programma
 print("Benvenuto nel programma rubrica:")
