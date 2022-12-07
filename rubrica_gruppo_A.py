@@ -15,26 +15,35 @@
 
 #Implementare funzioni:
 
-def visualizza_lista(lista):
-    pos = 1
+def visualizza_lista(nomi, numeri):
     print("Lista nomi: -----------------")
-    for nome in lista:
-        print("nome",pos,">",nome)
-        pos += 1
+    for i in range(len(nomi)):
+        print("nome:", nomi[i] ,"numero: ", numeri[i])
     print("-----------------------------")
 
-def aggiungi_nome(lista, nome):
-    lista.append(nome)
+def aggiungi(lista, elemento):
+    lista.append(elemento)
     return lista
 
-def elimina_nome(nomi, nome):
+def elimina(lista, elemento):
     nuova_lista = []
-    for n in nomi:
-        if n != nome:
-            nuova_lista.append(n)
+    for el in lista:
+        if el != elemento:
+            nuova_lista.append(el)
     return nuova_lista
 
-def modifica_nome(lista, vecchio_nome, nuovo_nome):
+def trova_numero(nome, lista_nomi, lista_numeri):
+    indice = -1
+    for i in range(len(lista_nomi)):
+        if nome == lista_nomi[i]:
+            indice = i
+            break
+    if indice != -1:
+        return lista_numeri[indice]
+    else:
+        return "numero non trovato"
+
+def modifica(lista, vecchio_nome, nuovo_nome):
     for i in range(len(lista)):
         if lista[i] == vecchio_nome:
             lista[i] = nuovo_nome
@@ -47,22 +56,38 @@ print("comandi disponibili: lista, aggiungi, elimina, modifica, esci")
 
 comando = input("inserire comando >> ")
 esci = False
-lista = []
+
+nomi = []
+numeri = []
+
 while not esci:
 
     match comando:
         case 'lista':
-            visualizza_lista(lista) 
+            visualizza_lista(nomi, numeri) 
         case 'aggiungi':
             nome = input("Inserisci nome da aggiungere >> ")
-            lista = aggiungi_nome(lista, nome)
+            numero = input("Inserisci numero da aggiungere >> ")
+            nomi = aggiungi(nomi, nome)
+            numeri = aggiungi(numeri, numero)
         case 'elimina':
             nome = input("Inserisci nome da eliminare >> ")
-            lista = elimina_nome(lista, nome)
+            numero = trova_numero(nome, nomi, numeri)
+            nomi = elimina(nomi, nome)
+            numeri = elimina(numeri, numero)
         case 'modifica':
-            nome = input("Inserisci nome da modificare >> ")
-            nuovo_nome = input("Inserisci il nuovo nome >> ")
-            lista = modifica_nome(lista, nome, nuovo_nome)
+            nome = input("Inserisci il contatto da modificare >> ")
+            ris = input("modificare il nome o il numero? nome/numero >> ")
+            if ris == 'nome':
+                nuovo_nome = input("inserisci nuovo nome >> ")
+                nomi = modifica(nomi, nome, nuovo_nome)
+            elif ris == 'numero':
+                nuovo_numero = input("inserisci nuovo numero >> ")
+                numero = trova_numero(nome, nomi, numeri)
+                numeri = modifica(numeri, numero, nuovo_numero)
+            else:
+                print("scelta sbagliata.")
+            
         case 'esci':
             print("sto chiudendo il programma")
             esci = True
